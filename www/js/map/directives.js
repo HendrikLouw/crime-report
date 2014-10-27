@@ -1,4 +1,4 @@
-angular.module('crime-report.directives', [])
+angular.module('crime-report.map.directives', [])
 
 .directive('map', function() {
   return {

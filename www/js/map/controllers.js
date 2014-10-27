@@ -1,8 +1,9 @@
-angular.module('crime-report.controllers', [])
+angular.module('crime-report.map.controllers', [])
 
 .controller('MapCtrl', function($scope, $ionicLoading) {
   $scope.mapCreated = function(map) {
     $scope.map = map;
+    $scope.centerOnMe();
   };
 
   $scope.centerOnMe = function () {
