@@ -1,4 +1,4 @@
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.directives'])
+angular.module('crime-report', ['ionic', 'crime-report.controllers', 'crime-report.directives'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
