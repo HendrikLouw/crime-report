@@ -1,7 +1,7 @@
 {
-  "name": "crime-report",
+  "name": "maptest",
   "version": "1.0.0",
-  "description": "crime-report: An Ionic project",
+  "description": "maptest: An Ionic project",
   "dependencies": {
     "gulp": "^3.5.6",
     "gulp-sass": "^0.7.1",

@@ -1,12 +1,4 @@
 {
-  "name": "crime-report",
-  "app_id": "",
-  "gulpStartupTasks": [
-    "sass",
-    "watch"
-  ],
-  "watchPatterns": [
-    "www/**/*",
-    "!www/lib/**/*"
-  ]
+  "name": "maptest",
+  "app_id": ""
 }
