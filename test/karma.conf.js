@@ -1,6 +1,6 @@
 // Karma configuration
 // Generated on Mon Oct 27 2014 11:25:32 GMT+0200 (SAST)
-
+var configFiles = require('../configFiles.js');
 module.exports = function(config) {
   config.set({
 
@@ -14,11 +14,7 @@ module.exports = function(config) {
 
 
     // list of files / patterns to load in the browser
-    files: [
-      'www/lib/ionic/js/ionic.bundle.js',
-      'www/js/**/*.js',
-      'test/**/*Spec.js'
-    ],
+    files: configFiles,
 
 
     // list of files to exclude

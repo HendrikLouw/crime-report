@@ -6,7 +6,8 @@ var sass = require('gulp-sass');
 var minifyCss = require('gulp-minify-css');
 var rename = require('gulp-rename');
 var sh = require('shelljs');
-
+var gulpKarma = require('gulp-karma');
+var testFiles = require('./configFiles.js');      
 var paths = {
   sass: ['./scss/**/*.scss']
 };
@@ -23,6 +24,28 @@ gulp.task('sass', function(done) {
     .pipe(rename({ extname: '.min.css' }))
     .pipe(gulp.dest('./www/css/'))
     .on('end', done);
+});
+
+gulp.task('test', function() {
+  return gulp.src(testFiles)
+    .pipe(gulpKarma({
+      configFile: './test/karma.conf.js',
+      action: 'run'
+    }))
+    .on('error', function(err) {
+      throw err;
+    });
+});
+
+gulp.task('test-watch', function() {
+  return gulp.src(testFiles)
+    .pipe(gulpKarma({
+      configFile: './test/karma.conf.js',
+      action: 'watch'
+    }))
+    .on('error', function(err) {
+      throw err;
+    });
 });
 
 gulp.task('watch', function() {
